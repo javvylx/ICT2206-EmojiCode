@@ -1,3 +1,6 @@
+📦 sockets 🏠
+📦 files 🏠
+
 💭💭💭💭💭💭 ValueType for HTTP request💭💭💭💭💭💭
 🕊 🇰🇷 🍇
     💭 HTTP Method
@@ -19,18 +22,18 @@
         ↩️ 방법
     🍉
 
-    💭 Getter method for URI
+    💭 Getter method for URI 
     ❗️🧟➡️ 🔡 🍇
         ↩️ 우리
     🍉
 
     💭 Getter method for Host
-    ❗️🧟➡️ 🔡 🍇
+    ❗️👩‍🏭➡️ 🔡 🍇
         ↩️ 주최자
     🍉
 
     💭 Getter method for httpVersion
-    ❗️🧟➡️ 🔡 🍇
+    ❗️👩‍🌾➡️ 🔡 🍇
         ↩️ 버전
     🍉
 
@@ -50,7 +53,7 @@
     🍉
 
     💭 Setter method for Host
-    🖍❗️🧞‍♂️ 입력 🔡 🍇
+    🖍❗️ 👨‍🍼 입력 🔡 🍇
         입력 ➡️🖍주최자
     🍉
 
@@ -77,80 +80,181 @@
 
     💭 Constructor to extract required information
     🆕▶️🧜‍♂️ 🍼 요청 🔡 🍇 
-        💭 Split the request
-        🔫 요청 🔤❌r❌n🔤❗️ ➡️ 머리글
+        
+        💭Check if request is NULL
+        ↪️요청🙌🔤NULL🔤 🍇
+            😀🔤IN NULL REQUEST🔤❗️
+            💭Create a new valueType
+            🆕🇰🇷 🔤NULL🔤 🔤NULL🔤 🔤NULL🔤 🔤NULL🔤 🔤NULL🔤❗️ ➡️ 테스트이
+            
+            💭Put the newly create valueType into the class variable
+            테스트이 ➡️ 🖍대한민국
+        🍉
+        🙅‍ 🍇
+            😀🔤Request start🔤❗️
+            😀요청❗️
+            😀🔤Request end🔤❗️
+            💭 Split the request
+            🔫 요청 🔤❌r❌n🔤❗️ ➡️ 머리글
 
-        💭 Split the request header (GET / HTTP/1.1)
-        🔫 🐽머리글 0❗️ 🔤 🔤❗️ ➡️ 의뢰
+            💭 Split the request header (GET / HTTP/1.1)
+            🔫 🐽머리글 0❗️ 🔤 🔤❗️ ➡️ 의뢰
 
-        💭Creating a new dictionary to store the headers
-        🆕🍯🐚🔡🍆❗️ ➡️ 🖍🆕헤더사전
+            💭Creating a new dictionary to store the headers
+            🆕🍯🐚🔡🍆❗️ ➡️ 🖍🆕헤더사전
 
-        💭 For loop the splitted request and split the header name and value
-        🔂 머리 머리글 🍇
+            💭 For loop the splitted request and split the header name and value
+            🔂 머리 머리글 🍇
 
-            💭 Search for the first ":" position
-            🔍 머리 🔤:🔤❗️ ➡️ 인덱스
+                💭 Search for the first ":" position
+                🔍 머리 🔤:🔤❗️ ➡️ 인덱스
 
-            💭 If dont have continue...
-            ↪️인덱스🙌🤷 🍇
-                💭Bullshit dont even have continue statement ...
+                💭 If dont have continue...
+                ↪️인덱스🙌🤷 🍇
+                    💭Bullshit dont even have continue statement ...
+                🍉
+
+                💭 If have break it down into header name and it's value
+                🙅‍ 🍇
+                    💭 🔡🍺 인덱스❗️➡️ test3
+                    🔧🔪 머리 🍺인덱스 ➕ 1 📏🎶머리❗️❓❗️❗️ ➡️ 값
+                    📪🔪 머리 0 🍺인덱스❗️❗️ ➡️ 이름
+                    값 ➡️🐽헤더사전 이름❗️
+                🍉    
             🍉
 
-            💭 If have break it down into header name and it's value
+            💭Create a new dictionary to store the required headers
+            🆕🍯🐚🔡🍆❗️ ➡️ 🖍🆕 ㄹ머리글
+
+            💭Check if host is included within the request
+            ↪️ 🐽헤더사전  🔤host🔤❗️ ➡️ a 🍇
+                a ➡️🐽ㄹ머리글 🔤host🔤❗️
+            🍉
+
+            💭Check if dont have put NULL
             🙅‍ 🍇
-                💭 🔡🍺 인덱스❗️➡️ test3
-                🔧🔪 머리 🍺인덱스 ➕ 1 📏🎶머리❗️❓❗️❗️ ➡️ 값
-                📪🔪 머리 0 🍺인덱스❗️❗️ ➡️ 이름
-                값 ➡️🐽헤더사전 이름❗️
-            🍉    
+                🔤NULL🔤 ➡️🐽ㄹ머리글 🔤host🔤❗️
+            🍉
+
+            💭Check if userAgent is included within the request
+            ↪️ 📏의뢰❓🙌3 🍇
+                🐽의뢰 0❗️ ➡️🐽ㄹ머리글 🔤httpMethod🔤❗️
+                🐽의뢰 1❗️ ➡️🐽ㄹ머리글 🔤uri🔤❗️
+                🐽의뢰 2❗️ ➡️🐽ㄹ머리글 🔤httpver🔤❗️
+            🍉
+
+            💭Check if dont have put NULL
+            🙅‍ 🍇
+                🔤NULL🔤 ➡️🐽ㄹ머리글 🔤httpMethod🔤❗️
+                🔤NULL🔤 ➡️🐽ㄹ머리글 🔤uri🔤❗️
+                🔤NULL🔤 ➡️🐽ㄹ머리글 🔤httpver🔤❗️
+            🍉
+
+            💭Check if request list got three
+            ↪️ 🐽헤더사전  🔤user-agent🔤❗️ ➡️ b 🍇
+                b ➡️🐽ㄹ머리글 🔤user-agent🔤❗️
+            🍉
+
+            💭Check if dont have put NULL
+            🙅‍ 🍇
+                🔤NULL🔤 ➡️🐽ㄹ머리글 🔤user-agent🔤❗️
+            🍉
+
+            💭Create a new valueType
+            🆕🇰🇷 🔡🍺🐽ㄹ머리글 🔤httpMethod🔤❗️❗️ 🔡🍺🐽ㄹ머리글 🔤uri🔤❗️❗️ 🔡🍺🐽ㄹ머리글 🔤host🔤❗️❗️ 🔡🍺🐽ㄹ머리글 🔤httpver🔤❗️❗️ 🔡🍺🐽ㄹ머리글 🔤user-agent🔤❗️❗️❗️ ➡️ 테스트이
+            
+            💭Put the newly create valueType into the class variable
+            테스트이 ➡️ 🖍대한민국
+
+            💭Test getter of httpMethods
+            🧟‍♀️테스트이❗️ ➡️ abcc
+            😀abcc❗️
+            🧟테스트이❗️ ➡️ abc
+            😀abc❗️
+            👩‍🏭테스트이❗️ ➡️ abccc
+            😀abccc❗️
+            👩‍🌾테스트이❗️ ➡️ abcccc
+            😀abcccc❗️
+            🧞‍♀️테스트이❗️ ➡️ abccccc
+            😀abccccc❗️
         🍉
-
-        💭Create a new dictionary to store the required headers
-        🆕🍯🐚🔡🍆❗️ ➡️ 🖍🆕 ㄹ머리글
-
-        💭Check if host is included within the request
-        ↪️ 🐽헤더사전  🔤host🔤❗️ ➡️ a 🍇
-            a ➡️🐽ㄹ머리글 🔤host🔤❗️
-        🍉
-
-        💭Check if dont have put NULL
-        🙅‍ 🍇
-            🔤NULL🔤 ➡️🐽ㄹ머리글 🔤host🔤❗️
-        🍉
-
-        💭Check if userAgent is included within the request
-        ↪️ 🐽헤더사전  🔤user-agent🔤❗️ ➡️ b 🍇
-            b ➡️🐽ㄹ머리글 🔤user-agent🔤❗️
-        🍉
-
-        💭Check if dont have put NULL
-        🙅‍ 🍇
-            🔤NULL🔤 ➡️🐽ㄹ머리글 🔤user-agent🔤❗️
-        🍉
-
-        💭Create a new valueType
-        🆕🇰🇷 🐽의뢰 0❗️ 🐽의뢰 1❗️ 🔡🍺🐽ㄹ머리글 🔤host🔤❗️❗️ 🐽의뢰 2❗️ 🔡🍺🐽ㄹ머리글 🔤user-agent🔤❗️❗️❗️ ➡️ 테스트이
-        
-        💭Put the newly create valueType into the class variable
-        테스트이 ➡️ 🖍대한민국
-
-        💭Test getter of httpMethods
-        💭🧟‍♀️테스트이❗️ ➡️ abcc
-        💭😀abcc❗️
     🍉
 
+    ❗️ 🦹 open🔡 ➡️ 👌 🍇
+        🆗 🆕📄▶️📜 open❗️ 🍇
+            ↩️👍
+        🍉
+        🙅‍♂️ error 🍇
+            ↩️👎
+        🍉
+    🍉
+
+    ❗️🖕🏼➡️👌🍇
+        🧟대한민국❗️ ➡️ abc
+
+        ↪️ abc🙌🔤NULL🔤🍇
+            ↩️👍
+        🍉
+        ↪️ abc🙌🔤/🔤 🍇
+            💭↩️👍
+            ↩️ 🦹👇 🔤index.html🔤❗️
+        🍉
+        🙅‍ 🍇
+            ↩️ 🦹👇 abc❗️
+        🍉
+    🍉
+
+
+    💭METHOD ONE
+    💭CHECK for GET else return false
+    
+    💭METHOD TWO
+    💭CHECK for HTTP/1.1 else return false
+
+    💭METHOD THREE
+    💭CHECK for valid userAgent else return false
+
+    💭METHOD FOUR
+    💭RETURN HTTP RESPOND CODE OR JUST RETURN THE HTTP RESPOND HERE IN STRING
+
+
 🍉
+
+
+💭🏁 🍇
+💭    💭🆕🇰🇷 🔡wts🔡 🔡ghj🔡 🔡def🔡 🔡abc🔡❗️ ➡️ test1
+💭    🆕🇰🇷 🔤wts🔤 🔤123🔤 🔤5132🔤 🔤513🔤 🔤ssss🔤❗️ ➡️ 🖍🆕test1
+💭    🆕🇰🇵▶️🧜‍♂️ 🔤GET / HTTP/1.1❌r❌nHost: test❌r❌nUser-Agent: test1🔤❗️ ➡️ test3
+💭    🧟‍♀️test1❗️ ➡️ abcc
+💭    💭😀abcc❗️
+💭    🧞test1🔤wtsssss🔤❗️
+💭    🧟‍♀️test1❗️ ➡️ dsa
+💭    💭😀dsa❗️
+💭
+💭🍉
+
 
 
 🏁 🍇
-    💭🆕🇰🇷 🔡wts🔡 🔡ghj🔡 🔡def🔡 🔡abc🔡❗️ ➡️ test1
-    🆕🇰🇷 🔤wts🔤 🔤123🔤 🔤5132🔤 🔤513🔤 🔤ssss🔤❗️ ➡️ 🖍🆕test1
-    🆕🇰🇵▶️🧜‍♂️ 🔤GET / HTTP/1.1❌r❌nHost: test❌r❌nUser-Agent: test1🔤❗️ ➡️ test3
-    🧟‍♀️test1❗️ ➡️ abcc
-    💭😀abcc❗️
-    🧞test1🔤wtsssss🔤❗️
-    🧟‍♀️test1❗️ ➡️ dsa
-    💭😀dsa❗️
+    🍺🆕🏄 8728❗️ ➡️ server
 
+    🔁 👍 🍇
+        🍺 🙋 server❗️ ➡️ clientSocket
+
+        🔁 👍 🍇
+            🆗 data 👂 clientSocket 600❗️ 🍇
+                😀🔡📏data❓❗️❗️
+                ↪️📏data❓▶️0🍇
+                    😀🔤dsadsadsasd🔤❗️
+                    🆕🇰🇵▶️🧜‍♂️ 🍺🔡data❗️❗️ ➡️ test3
+                    🍺💬 clientSocket 📇 🔤HTTP/1.1 404 Not found❌r❌nContent-Type: text/html; charset=utf-8❌r❌n❌r❌n404 Not found🔤❗️❗️
+                🍉
+            🍉
+            🙅‍♀️ error 🍇
+                😀 🔤An error occured: 🧲💬error❗️🧲🔤❗️
+            🍉
+            🚪 clientSocket❗️
+        🍉
+    🍉
 🍉
+
