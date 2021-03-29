@@ -1,0 +1,445 @@
+📦 sockets 🏠
+📦 files 🏠
+
+💭💭💭💭💭💭 ValueType for HTTP request💭💭💭💭💭💭
+🕊 🇰🇷 🍇
+    💭 HTTP Method
+    🖍🆕 방법 🔡
+    💭 URI
+    🖍🆕 우리 🔡
+    💭 Host
+    🖍🆕 주최자 🔡
+    💭 httpVersion
+    🖍🆕 버전 🔡
+    💭 userAgent
+    🖍🆕 에이전트 🔡
+
+    💭 Constructor for this value type (struct)
+    🆕 🍼 방법 🔡 🍼 우리 🔡 🍼 주최자 🔡 🍼 버전 🔡 🍼 에이전트 🔡 🍇🍉
+
+    💭 Getter method for HTTP Method
+    ❗️🧟‍♀️➡️ 🔡 🍇
+        ↩️ 방법
+    🍉
+
+    💭 Getter method for URI 
+    ❗️🧟➡️ 🔡 🍇
+        ↩️ 우리
+    🍉
+
+    💭 Getter method for Host
+    ❗️👩‍🏭➡️ 🔡 🍇
+        ↩️ 주최자
+    🍉
+
+    💭 Getter method for httpVersion
+    ❗️👩‍🌾➡️ 🔡 🍇
+        ↩️ 버전
+    🍉
+
+    💭 Getter method for userAgent
+    ❗️🧞‍♀️➡️ 🔡 🍇
+        ↩️ 에이전트
+    🍉
+
+    💭 Setter method for HTTP Method
+    🖍❗️🧞 입력 🔡 🍇
+        입력 ➡️🖍방법
+    🍉
+    
+    💭 Setter method for URI
+    🖍❗️🧞‍♂️ 입력 🔡 🍇
+        입력 ➡️🖍우리
+    🍉
+
+    💭 Setter method for Host
+    🖍❗️ 👨‍🍼 입력 🔡 🍇
+        입력 ➡️🖍주최자
+    🍉
+
+    💭 Setter method for httpVersion
+    🖍❗️🧜‍♀️ 입력 🔡 🍇
+        입력 ➡️🖍버전
+    🍉
+
+    💭 Setter method for userAgent
+    🖍❗️🧜 입력 🔡 🍇
+        입력 ➡️🖍에이전트
+    🍉
+🍉
+
+💭💭💭💭💭💭 Class for HTTP request check💭💭💭💭💭💭
+🐇 🇰🇵 🍇
+    💭Whole Request
+    🖍🆕요청🔡
+    💭 Request using ValueType
+    🖍🆕대한민국🇰🇷
+
+    💭 Default constructor
+    🆕 🍼 요청 🔡 🍼 대한민국 🇰🇷 🍇 🍉
+
+    💭 Constructor to extract required information
+    🆕▶️🧜‍♂️ 🍼 요청 🔡 🍇 
+        
+        💭 Check if request is NULL
+        ↪️요청🙌🔤NULL🔤 🍇
+
+            💭 Debugging prints
+            😀🔤IN NULL REQUEST🔤❗️
+
+            💭 Create a new valueType
+            🆕🇰🇷 🔤NULL🔤 🔤NULL🔤 🔤NULL🔤 🔤NULL🔤 🔤NULL🔤❗️ ➡️ 테스트이
+            
+            💭 Put the newly create valueType into the class variable
+            테스트이 ➡️ 🖍대한민국
+        🍉
+        🙅‍ 🍇
+
+            💭 Debugging prints
+            😀🔤Request start🔤❗️
+            😀요청❗️
+            😀🔤Request end🔤❗️
+            
+            💭 Split the request
+            🔫 요청 🔤❌r❌n🔤❗️ ➡️ 머리글
+
+            💭 Split the request header (GET / HTTP/1.1)
+            🔫 🐽머리글 0❗️ 🔤 🔤❗️ ➡️ 의뢰
+
+            💭 Creating a new dictionary to store the headers
+            🆕🍯🐚🔡🍆❗️ ➡️ 🖍🆕헤더사전
+
+            💭 For loop the splitted request and split the header name and value
+            🔂 머리 머리글 🍇
+
+                💭 Search for the first ":" position
+                🔍 머리 🔤:🔤❗️ ➡️ 인덱스
+
+                💭 If dont have continue...
+                ↪️인덱스🙌🤷 🍇
+                    💭Bullshit dont even have continue statement ...
+                🍉
+
+                💭 If have break it down into header name and it's value
+                🙅‍ 🍇
+                    💭 🔡🍺 인덱스❗️➡️ test3
+                    🔧🔪 머리 🍺인덱스 ➕ 1 📏🎶머리❗️❓❗️❗️ ➡️ 값
+                    📪🔪 머리 0 🍺인덱스❗️❗️ ➡️ 이름
+                    값 ➡️🐽헤더사전 이름❗️
+                🍉    
+            🍉
+
+            💭 Create a new dictionary to store the required headers
+            🆕🍯🐚🔡🍆❗️ ➡️ 🖍🆕 ㄹ머리글
+
+            💭 Check if host is included within the request
+            ↪️ 🐽헤더사전  🔤host🔤❗️ ➡️ a 🍇
+                a ➡️🐽ㄹ머리글 🔤host🔤❗️
+            🍉
+
+            💭 Check if dont have put NULL
+            🙅‍ 🍇
+                🔤NULL🔤 ➡️🐽ㄹ머리글 🔤host🔤❗️
+            🍉
+
+            💭 Check if request list got three
+            ↪️ 📏의뢰❓🙌3 🍇
+                🐽의뢰 0❗️ ➡️🐽ㄹ머리글 🔤httpMethod🔤❗️
+                🐽의뢰 1❗️ ➡️🐽ㄹ머리글 🔤uri🔤❗️
+                🐽의뢰 2❗️ ➡️🐽ㄹ머리글 🔤httpver🔤❗️
+            🍉
+
+            💭 Check if dont have put NULL
+            🙅‍ 🍇
+                🔤NULL🔤 ➡️🐽ㄹ머리글 🔤httpMethod🔤❗️
+                🔤NULL🔤 ➡️🐽ㄹ머리글 🔤uri🔤❗️
+                🔤NULL🔤 ➡️🐽ㄹ머리글 🔤httpver🔤❗️
+            🍉
+
+            💭 Check if userAgent is included within the request 
+            ↪️ 🐽헤더사전  🔤user-agent🔤❗️ ➡️ b 🍇
+                b ➡️🐽ㄹ머리글 🔤user-agent🔤❗️
+            🍉
+
+            💭 Check if dont have put NULL
+            🙅‍ 🍇
+                🔤NULL🔤 ➡️🐽ㄹ머리글 🔤user-agent🔤❗️
+            🍉
+
+            💭 Create a new valueType
+            🆕🇰🇷 🔡🍺🐽ㄹ머리글 🔤httpMethod🔤❗️❗️ 🔡🍺🐽ㄹ머리글 🔤uri🔤❗️❗️ 🔡🍺🐽ㄹ머리글 🔤host🔤❗️❗️ 🔡🍺🐽ㄹ머리글 🔤httpver🔤❗️❗️ 🔡🍺🐽ㄹ머리글 🔤user-agent🔤❗️❗️❗️ ➡️ 테스트이
+            
+            💭 Put the newly create valueType into the class variable
+            테스트이 ➡️ 🖍대한민국
+
+            💭 Debugging print to test getter of httpMethods
+            💭🧟‍♀️테스트이❗️ ➡️ abcc
+            💭😀abcc❗️
+            💭🧟테스트이❗️ ➡️ abc
+            💭😀abc❗️
+            💭👩‍🏭테스트이❗️ ➡️ abccc
+            💭😀abccc❗️
+            💭👩‍🌾테스트이❗️ ➡️ abcccc
+            💭😀abcccc❗️
+            💭🧞‍♀️테스트이❗️ ➡️ abccccc
+            💭😀abccccc❗️
+        🍉
+    🍉
+
+    💭METHOD TO GET FILE PATH
+    ❗️ 👯‍♀️ test🔡 ➡️ 🔡 🍇
+    
+        ↪️test🙌🔤/🔤🍇
+            ↩️🔤/var/www/html/index.html🔤
+        🍉
+        💭Create the path
+        ↩️🔤/var/www/html🧲test🧲🔤
+
+    🍉
+
+    💭METHOD TO TRY OPENING A FILE 👇👇👇👇👇👇👇👇👇👇👇👇
+    ❗️ 🦹 열다🔡 ➡️ 👌 🍇
+
+        💭Create the path
+        👯‍♀️👇 열다❗ ➡️ 파일디렉토리
+
+
+        💭Try opening the file (If can open return true)
+        🆗 🆕 📄 ▶️ 📜 파일디렉토리❗️ 🍇
+            ↩️👍
+        🍉
+
+        🙅‍♂️ error 🍇
+            ↩️👎
+        🍉
+    🍉
+
+    💭METHOD TO CHECK IF FILE EXIST 
+    ❗️🦄➡️👌🍇
+        🧟대한민국❗️ ➡️ 파일이름경로
+
+        ↪️ 파일이름경로🙌🔤NULL🔤🍇
+            ↩️👎
+        🍉
+        🙅↪️ 파일이름경로🙌🔤/🔤 🍇
+            💭↩️👍
+            ↩️ 🦹👇 🔤/index.html🔤❗️
+        🍉
+        🙅‍ 🍇
+            ↩️ 🦹👇 파일이름경로❗️
+        🍉
+    🍉
+
+    ♻️ 🍇
+        😀 🔤Ended🔤❗️
+    🍉
+    
+
+    💭METHOD ONE
+    💭CHECK for GET else return false
+    ❗ 🖕🏿➡️👌🍇
+        🧟‍♀️ 대한민국❗️➡️ 가져오기
+
+        ↪️ 가져오기 🙌 🔤GET🔤🍇
+            ↩️👍
+        🍉    
+        🙅🍇
+            ↩️👎
+        🍉
+    🍉
+    
+    💭METHOD TWO
+    💭CHECK for HTTP/1.1 else return false
+    ❗ 🖕🏽➡️👌🍇
+        👩‍🌾 대한민국❗️➡️ 편물
+        😀 편물❗️
+        ↪️ 편물 🙌 🔤HTTP/1.1🔤🍇
+            ↩️👍
+        🍉    
+        🙅🍇
+            ↩️👎
+        🍉
+    🍉
+
+    💭METHOD THREE
+    💭CHECK for valid userAgent else return false
+    ❗🖕🏾➡️👌🍇
+        🧞‍♀️ 대한민국❗️➡️ 곱슬곱슬하다
+        😀 🔤KSNSSNDSNDNASNDASNDNASDNAS🔤❗️
+        😀 곱슬곱슬하다❗️
+        😀 🔤KSNSSNDSNDNASNDASNDNASDNAS🔤❗️
+        ↪️ 곱슬곱슬하다🙌🔤NULL🔤🍇
+            ↩️👎
+        🍉
+        🙅🍇
+            💭 Search the list for a match in the list 
+            🍿 🔤Mozilla🔤 🔤curl🔤 🔤Gecko🔤 🔤Firefox🔤 🔤MSIE🔤 🔤Safari🔤 🔤AppleWebKit🔤 🔤Macintosh🔤 🔤Linux x86_64🔤 🔤Linux i686🔤 🔤Android🔤🍆 ➡️ 사용자에
+            🔂 나는 사용자에 🍇 💭 Create a variable to loop thru the list above
+                🔍 곱슬곱슬하다 나는❗️ ➡️ 사에아 💭 Search main method list with variable
+                ↪️사에아🙌🤷 🍇
+                🍉
+                🙅🍇
+                    😀 🔤UAUAUAUAUAUAUAUAAU SUCCESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS🔤❗️
+                    ↩️👍
+                🍉
+            🍉
+            ↩️👎
+        🍉
+    🍉
+
+    💭METHOD FOUR
+    💭RETURN HTTP RESPOND CODE OR JUST RETURN THE HTTP RESPOND HERE IN STRING
+    ❗ 🖕🏻➡️📇🍇
+    
+        💭 Dictionary of Error Responses
+        🆕🍯🐚📇🍆❗️ ➡️ 🖍🆕 dictErrorresponse
+        📇🔤HTTP/1.1 400 Bad Request❌r❌nContent-Type: text/html; charset=UTF-8❌r❌nContent-Length: 57❌r❌nConnection: close❌r❌n❌r❌n<! DOCTYPE html><html lang=ko><p>400 잘못된 요청</p></html>❌r❌n🔤❗️ ➡️🐽dictErrorresponse 🔤400🔤❗️
+        📇🔤HTTP/1.1 404 Not found❌r❌nContent-Type: text/html; charset=UTF-8❌r❌nContent-Length: 58❌r❌nConnection: close❌r❌n❌r❌n<! DOCTYPE html><html lang=ko><p>404 찾을 수 없음</p></html>❌r❌n🔤❗️ ➡️🐽dictErrorresponse 🔤404🔤❗️
+        📇🔤HTTP/1.1 405 Method Not Allowed❌r❌nContent-Type: text/html; charset=UTF-8❌r❌nContent-Length: 60❌r❌nConnection: close❌r❌n❌r❌n<! DOCTYPE html><html lang=ko><p>405 비 허가 된 방식</p></html>❌r❌n🔤❗️ ➡️🐽dictErrorresponse 🔤405🔤❗
+        📇🔤HTTP/1.1 500 Internal Server Error❌r❌nContent-Type: text/html; charset=UTF-8❌r❌nContent-Length: 60❌r❌nConnection: close❌r❌n❌r❌n<! DOCTYPE html><html lang=ko><p>500 인터넷 서버 오류</p></html>❌r❌n🔤❗️ ➡️🐽dictErrorresponse 🔤500🔤❗
+        📇🔤HTTP/1.1 505 HTTP Version Not Supported❌r❌nContent-Type: text/html; charset=UTF-8❌r❌nContent-Length: 67❌r❌nConnection: close❌r❌n❌r❌n<! DOCTYPE html><html lang=ko><p>505 HTTP 버전이 지원되지 않음</p></html>❌r❌n🔤❗️ ➡️🐽dictErrorresponse 🔤505🔤❗
+        
+        💭 Dictionary of MIME Type
+        🆕🍯🐚🔡🍆❗️ ➡️ 🖍🆕 dictMIME
+        🔤image/jpeg🔤 ➡️🐽dictMIME 🔤jpeg🔤❗️
+        🔤image/jpg🔤 ➡️🐽dictMIME 🔤jpg🔤❗️
+        🔤text/javascript🔤 ➡️🐽dictMIME 🔤js🔤❗️
+        🔤text/css🔤 ➡️🐽dictMIME 🔤css🔤❗️
+        🔤text/html🔤 ➡️🐽dictMIME 🔤html🔤❗️
+        🔤NULL🔤 ➡️🐽dictMIME 🔤NULL🔤❗️
+        😀 🔤sadasdasdasdasdasd🔤❗
+
+        💭 Boolean: GET Request
+        🖕🏿❗➡️ 방법1검사기
+        😀 🔤aaaaaaaaaa🔤❗
+        💭 Boolean: HTTP Version
+        🖕🏽❗➡️ 방법2검사기
+        😀 🔤bbbbbbbbbbbbbbb🔤❗
+        💭 Boolean: User Agent
+        🖕🏾❗➡️ 방법3검사기
+        😀 🔤affffffffffa🔤❗
+        💭 Boolean: checkfileExist
+        🦄❗➡️ checkFile
+        😀 🔤aaasdsdsdsdsdsdsdaa🔤❗
+
+        ↪️ checkFile🙌👍🍇
+            💭 Get File
+            🧟대한민국❗️ ➡️ file
+            👯‍♀️👇file❗➡️ fileDir
+
+            😀 🔤a11111111111ffa🔤❗
+            😀 fileDir❗
+            😀 🔤af11111111111111fffa🔤❗
+
+            💭 Get File Ext
+            🔫 fileDir 🔤.🔤❗️ ➡️ pewpewpew
+            
+            🔤NULL🔤 ➡️ 🖍🆕fileExt
+            🔤NULL🔤 ➡️ 🖍🆕MIMEType
+            ↪️ 📏pewpewpew❓🙌2 🍇
+                🐽pewpewpew 1❗️ ➡️ 🖍fileExt
+                💭🐽dictMIME fileExt❗️➡️ 🖍MIMEType
+            🍉
+            💭🙅🍇
+            💭    🔤NULL🔤  ➡️ 🐽temp 🔤fileExt🔤❗️
+            💭🍉
+            😀 🔤kkkkkkkkkkkkk🔤❗
+            ↪️ fileExt 🙌 🔤jpeg🔤🍇
+                🔤image/jpeg🔤 ➡️ 🖍MIMEType
+            🍉
+            🙅↪️fileExt 🙌 🔤jpg🔤🍇
+                🔤image/jpeg🔤 ➡️ 🖍MIMEType
+            🍉
+            🙅↪️fileExt 🙌 🔤js🔤🍇
+                🔤text/javascript🔤 ➡️ 🖍MIMEType
+            🍉
+            🙅↪️fileExt 🙌 🔤css🔤🍇
+                🔤text/css🔤 ➡️ 🖍MIMEType
+            🍉
+            🙅↪️fileExt 🙌 🔤html🔤🍇
+                🔤text/html🔤 ➡️ 🖍MIMEType
+            🍉
+            🙅🍇
+                🔤NULL🔤 ➡️ 🖍MIMEType
+            🍉
+
+            😀 🔤2222222222zzzzz🔤❗
+            😀 MIMEType❗
+            😀fileExt❗
+            😀 🔤zz22222222zzz🔤❗
+            😀 🔤zzzzzzzzzzzzzzzzzz🔤❗
+            💭 RETURN TO JERRY KOR KOR
+            🍺📇🐇📄 fileDir ❗ ➡ binFile
+             😀 🔤aaaaaaaaaaaaa🔤❗
+            
+            💭 GET CONTENT LENGTH
+            🔡📏binFile❓❗️➡ fileLength
+            💭🍺🔡 binFile ❗ ➡ fileData
+            💭🔡📏🎶fileData❗️❓❗️ ➡ fileLength
+            😀 🔤kaikeng🔤❗
+            ↪️ 방법1검사기🙌👎 🍇
+                ↩️🍺🐽dictErrorresponse 🔤405🔤❗️
+            🍉
+            🙅↪️ 방법2검사기🙌👎 🍇
+                ↩️🍺🐽dictErrorresponse 🔤505🔤❗️
+            🍉
+            🙅↪️ fileExt 🙌 🔤NULL🔤🍇
+                ↩️🍺🐽dictErrorresponse 🔤500🔤❗️
+            🍉
+            🙅↪️ MIMEType 🙌 🔤NULL🔤🍇
+                ↩️🍺🐽dictErrorresponse 🔤500🔤❗️
+            🍉
+            🙅↪️ 🤜방법1검사기🙌👍🤛 🙌 🤜방법2검사기🙌👍🤛 🙌 🤜방법3검사기🙌👍🤛 🍇
+                💭 Success Response
+
+                🔤HTTP/1.1 200 OK❌r❌nContent-Type: 🧲MIMEType🧲❌r❌nContent-Length: 🧲fileLength🧲❌r❌nConnection: close❌r❌n❌r❌n🔤 ➡️ saaa
+                📇saaa❗➕ binFile ➡️ sda
+                ↩️sda
+            🍉
+            🙅 🍇
+                ↩️🍺🐽dictErrorresponse 🔤400🔤❗️
+            🍉
+          🍉
+        🙅 🍇
+            ↩️🍺🐽dictErrorresponse 🔤404🔤❗️
+          🍉
+    🍉
+🍉
+
+
+💭🏁 🍇
+💭    💭🆕🇰🇷 🔡wts🔡 🔡ghj🔡 🔡def🔡 🔡abc🔡❗️ ➡️ test1
+💭    🆕🇰🇷 🔤wts🔤 🔤123🔤 🔤5132🔤 🔤513🔤 🔤ssss🔤❗️ ➡️ 🖍🆕test1
+💭    🆕🇰🇵▶️🧜‍♂️ 🔤GET / HTTP/1.1❌r❌nHost: test❌r❌nUser-Agent: test1🔤❗️ ➡️ test3
+💭    🧟‍♀️test1❗️ ➡️ abcc
+💭    💭😀abcc❗️
+💭    🧞test1🔤wtsssss🔤❗️
+💭    🧟‍♀️test1❗️ ➡️ dsa
+💭    💭😀dsa❗️
+💭
+💭🍉
+
+
+
+🏁 🍇
+    🍺🆕🏄 8728❗️ ➡️ server
+
+💭    🔁 👍 🍇
+💭        🍺 🙋 server❗️ ➡️ clientSocket
+
+        🔁 👍 🍇
+            🍺 🙋 server❗️ ➡️ clientSocket
+            🆗 data 👂 clientSocket 500❗️ 🍇
+                😀🔡📏data❓❗️❗️
+                ↪️📏data❓▶️0🍇
+                    😀🔤dsadsadsasd🔤❗️
+                    🆕🇰🇵▶️🧜‍♂️ 🍺🔡data❗️❗️ ➡️ test3
+                    🍺💬 clientSocket 🖕🏻test3❗️❗️
+                🍉
+            🍉
+            🙅‍♀️ error 🍇 🍉
+            🚪 clientSocket ❗️
+        🍉
+💭    🍉
+🍉
+
