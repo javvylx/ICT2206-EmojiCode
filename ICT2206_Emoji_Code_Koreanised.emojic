@@ -436,17 +436,14 @@
 
     💭METHOD TO CHECK IF FILE EXIST
 
-    ❗️🦄➡️👌🍇
+    ❗️🦄➡️🔡🍇
 
         🧟대한민국❗️ ➡️ 파일이름경로
 
-
-
         💭 Getter is NULL, return false
-
         ↪️ 파일이름경로🙌🔤NULL🔤🍇
 
-            ↩️👎
+            ↩️🔤거짓을찾을수없습니다🔤
 
         🍉
 
@@ -454,13 +451,30 @@
 
         🙅↪️ 파일이름경로🙌🔤/🔤 🍇
 
-            ↩️ 🦹👇 🔤/index.html🔤❗️
+            ↪️🤜🦹👇 🔤/index.html🔤❗️🤛🙌👍 🍇
+              ↩️🔤사실은파일입니다🔤
+            🍉
+            🙅‍ 🍇
+              ↩️🔤거짓을찾을수없습니다🔤
+            🍉
+
 
         🍉
 
         🙅‍ 🍇
-
-            ↩️ 🦹👇 파일이름경로❗️
+            ↪️🤜🦹👇 파일이름경로❗️🤛🙌👍 🍇
+              💭 Check if directory
+              🔫 파일이름경로 🔤.🔤❗️➡️ 디렉토리확인
+              ↪️ 📏디렉토리확인❓🙌1 🍇
+                ↩️🔤거짓파일이아님🔤
+              🍉
+              🙅‍ 🍇
+                ↩️ 🔤사실은파일입니다🔤
+              🍉
+            🍉
+            🙅‍ 🍇
+              ↩️🔤거짓을찾을수없습니다🔤
+            🍉
 
         🍉
 
@@ -594,6 +608,8 @@
 
         📇🔤HTTP/1.1 400 Bad Request❌r❌nContent-Type: text/html; charset=UTF-8❌r❌nContent-Length: 95❌r❌nConnection: close❌r❌n❌r❌n<! DOCTYPE html><html lang=ko><p>400 잘못된 요청</p><img src="/image/error.jpeg"></html>❌r❌n🔤❗️ ➡️🐽사전오류응답 🔤사백🔤❗️
 
+        📇🔤HTTP/1.1 403 Forbidden❌r❌nContent-Type: text/html; charset=UTF-8❌r❌nContent-Length: 85❌r❌nConnection: close❌r❌n❌r❌n<! DOCTYPE html><html lang=ko><p>403 금지</p><img src="/image/error.jpeg"></html>❌r❌n🔤❗️ ➡️🐽사전오류응답 🔤사백삼🔤❗️
+
         📇🔤HTTP/1.1 404 Not found❌r❌nContent-Type: text/html; charset=UTF-8❌r❌nContent-Length: 96❌r❌nConnection: close❌r❌n❌r❌n<! DOCTYPE html><html lang=ko><p>404 찾을 수 없음</p><img src="/image/error.jpeg"></html>❌r❌n🔤❗️ ➡️🐽사전오류응답 🔤사백사🔤❗️
 
         📇🔤HTTP/1.1 405 Method Not Allowed❌r❌nContent-Type: text/html; charset=UTF-8❌r❌nContent-Length: 100❌r❌nConnection: close❌r❌n❌r❌n<! DOCTYPE html><html lang=ko><p>405 비 허가 된 방식</p><img src="/image/error.jpeg"></html>❌r❌n🔤❗️ ➡️🐽사전오류응답 🔤사백오🔤❗
@@ -622,7 +638,7 @@
 
 
 
-        ↪️ 파일존재확인🙌👍🍇
+        ↪️ 파일존재확인🙌🔤사실은파일입니다🔤🍇
 
             💭 Get File
 
@@ -751,9 +767,13 @@
             🍉
 
           🍉
-
+        🙅↪️ 파일존재확인🙌🔤거짓을찾을수없습니다🔤 🍇
+            ↩️🍺🐽사전오류응답 🔤사백사🔤❗️
+          🍉
+        🙅↪️ 파일존재확인🙌🔤거짓파일이아님🔤 🍇
+            ↩️🍺🐽사전오류응답 🔤사백삼🔤❗️
+          🍉
         🙅 🍇
-
             ↩️🍺🐽사전오류응답 🔤사백사🔤❗️
 
           🍉
@@ -805,4 +825,3 @@
 💭    🍉
 
 🍉
-
